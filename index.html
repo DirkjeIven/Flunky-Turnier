@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flunky-Turnier</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ODDS OF GODS</h1>
+        <nav>
+            <span id="userInfo"></span>
+            <button id="logoutBtn">Abmelden</button>
+        </nav>
+    </header>
 
+    <main>
+        <section id="currentRound">
+            <h2>Aktuelle Runde: <span id="roundDisplay">-</span></h2>
+        </section>
+
+        <section id="betForm" style="display:none;">
+            <h2>Deine Tipps abgeben</h2>
+            <form id="tournamentForm">
+
+                <h3>Vorrunde</h3>
+                <div class="match-group" id="vorrunde"></div>
+              
+                <h3>Halbfinale</h3>
+                <div class="match-group" id="semiFinals"></div>
+                
+                <h3>Finale</h3>
+                <div class="match-group" id="finals"></div>
+                
+                <button type="submit">Tipps speichern</button>
+            </form>
+        </section>
+
+        <section id="leaderboard">
+            <h2>Rangliste</h2>
+            <table id="rankingTable">
+                <thead>
+                    <tr>
+                        <th>Platz</th>
+                        <th>Name</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
