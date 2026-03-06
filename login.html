@@ -1,1 +1,33 @@
-
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung - Turnier System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Flunky-Turnier</h1>
+        
+        <div class="auth-tabs">
+            <button class="tab-btn active" data-tab="login">Anmelden</button>
+            <button class="tab-btn" data-tab="register">Registrieren</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+            <input type="email" id="loginEmail" placeholder="E-Mail" required>
+            <input type="password" id="loginPassword" placeholder="Passwort" required>
+            <button type="submit">Anmelden</button>
+        </form>
+        <form id="registerForm" class="auth-form" style="display:none;">
+            <input type="text" id="registerName" placeholder="Name" required>
+            <input type="email" id="registerEmail" placeholder="E-Mail" required>
+            <input type="password" id="registerPassword" placeholder="Passwort" required>
+            <button type="submit">Registrieren</button>
+        </form>
+        <div id="errorMessage"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
