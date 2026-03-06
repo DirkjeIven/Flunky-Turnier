@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Turnier System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>⚙️ Admin-Bereich</h1>
+        <button onclick="window.location.href='index.html'">Zurück</button>
+    </header>
 
+    <main>
+        <section>
+            <h2>Runde ändern</h2>
+            <select id="roundSelect">
+                <option value="VR">Vorrunde</option>
+                <option value="SF">Halbfinale</option>
+                <option value="F">Finale</option>
+            </select>
+            <button id="updateRound">Runde aktualisieren</button>
+        </section>
+
+        <section>
+            <h2>Spielergebnis eintragen</h2>
+            <form id="resultForm">
+                <input type="text" id="team1" placeholder="Team 1" required>
+                <input type="text" id="team2" placeholder="Team 2" required>
+                <select id="winner" required>
+                    <option value="">Gewinner wählen</option>
+                    <option value="team1">Team 1</option>
+                    <option value="team2">Team 2</option>
+                </select>
+                <select id="matchRound" required>
+                    <option value="VR">Vorrunde</option>
+                    <option value="SF">Halbfinale</option>
+                    <option value="F">Finale</option>
+                </select>
+                <button type="submit">Ergebnis speichern</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Punkte neu berechnen</h2>
+            <button id="recalculate">Alle Punkte neu berechnen</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
